@@ -1,5 +1,5 @@
 # verbose-bassoon
-student collaborative project
+student collaborative project by Jaycob & Muneeb
 
 ## Expense Tracker
 
@@ -12,5 +12,9 @@ Download `expense_tracker.py` in `main` branch, then utilize terminal to run the
 ## Features
 
 ## Credits
+
+* Jaycob
+
+* Muneeb
 
 ## Reflection
