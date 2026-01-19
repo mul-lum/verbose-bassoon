@@ -14,7 +14,9 @@ Download `expense_tracker.py` in `main` branch, then utilize terminal to run the
 ## Credits
 
 * Jaycob
+    > placeholder
 
 * Muneeb
+    > placeholder
 
 ## Reflection
