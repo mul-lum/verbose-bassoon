@@ -7,4 +7,4 @@ student collaborative project
 
 ## Credits
 
-## Challenges
+## Reflection
