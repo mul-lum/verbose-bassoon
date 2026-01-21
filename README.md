@@ -11,7 +11,8 @@ Download `expense_tracker.py` in `main` branch, then run `python3 expense_tracke
 
 ## Features
 
-
+### Track your expenses
+A key feature within our program is the ability to track expenses, using `view [name]` to view your expenses and those within a certain category.
 
 ## Credits
 
