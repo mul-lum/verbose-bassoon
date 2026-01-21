@@ -7,9 +7,11 @@ Track your expenses using our script, it'll make sure you never spend an extra p
 
 ## Usage
 
-Download `expense_tracker.py` in `main` branch, then utilize terminal to run the CLI.
+Download `expense_tracker.py` in `main` branch, then run `python3 expense_tracker.py` (based on python installation) in terminal. 
 
 ## Features
+
+
 
 ## Credits
 
