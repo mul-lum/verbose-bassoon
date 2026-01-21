@@ -3,15 +3,23 @@ _profile = {
     'category': {},
 }
 
-def getExpense(ctx):
-    categories, expenses = _profile['category'], _profile['expenses']
+def prompt(msg):
+    act = input(msg).lower()
 
-    return expenses[ctx]
+    if act in {'y', 'yes', 'Y'}:
+        return True
+    else:
+        return False
 
 def add(ctx, amt, category=None):
-    categories, expenses = _profile['category'], _profile['expenses']
+    if amt.isdigit() != True:
+        return f'AMOUNT IS NOT A NUMBER'
+
+    expenses = _profile['expenses']
 
     if category != None:
+        categories = _profile['category']
+
         if not category in categories:
             categories[category] = []
         
@@ -46,13 +54,50 @@ def view(ctx):
 def sum(ctx):
     categories, expenses = _profile['category'], _profile['expenses']
 
-    if ctx in expenses:
-        return 
+    if ctx in categories:
+        total = 0
 
-    return
+        for expense in categories[ctx]:
+            value = expenses[expense]
+            total += value
+
+        return f'CATEGORY `{ctx}` IS ${total}'
+        
+    return f'NO CATEGORY FOUND `{ctx}`'
 
 def remove(ctx):
-    return
+    categories, expenses = _profile['category'], _profile['expenses']
+
+    if ctx in categories:
+        remove = prompt('ARE YOU SURE YOU WANT TO REMOVE THIS CATEGORY (means deleting every expense in it too...)')
+
+        if remove == True:
+            category = categories[ctx]
+
+            for expense in category:
+                dict.pop(expenses, expense)
+
+            dict.clear(category)
+            dict.pop(categories, ctx)
+
+            return f'SUCESSFULLY REMOVED ALL EXPENSES AND CATEGORY {ctx}'
+        else:
+            return 'PROMPT FAILED'
+
+    if ctx in expenses:
+        dict.pop(expenses, ctx)
+
+        return f'REMOVED EXPENSE {ctx}'
+
+    return f'{ctx} NOT FOUND'
+
+def help(ctx):
+    meta = {
+        'add': '',
+        'view': '',
+        'sum': '',
+        'remove': '',
+    }
 
 def parse(cmd):
     COMMANDS = {
@@ -60,6 +105,7 @@ def parse(cmd):
         'view': [view, 1],
         'sum': [view, 1],
         'remove': [remove, 1],
+        'help': [help, 1]
     }
 
     parsed = cmd.split(' ', 3)
