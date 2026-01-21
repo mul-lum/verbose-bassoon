@@ -28,14 +28,20 @@ A key feature within our program is the ability to track expenses, using `view [
 * Jaycob
  (Lead Developer)
 > Designed and implemented the core Python program
+
 > Developed main features including adding, viewing, calculating, filtering, and deleting expenses
+
 > Handled error checking, code structure, and overall logic
+
 > Taught other groupmate on how to improve ReadMe
 
 * Muneeb
  > Wrote and organized the README file
+
  > Documented project features, instructions, and reflection
+
  > Assisted with reviewing code and coordinating GitHub submissions
+
  > Helped with code
 
 ## Reflection
