@@ -26,10 +26,11 @@ Adding expenses and categorizing them is simple within our program. All in one c
 ### Removing Expenses/Categories
 Removing categories or expenses is crucial for managing expenses and accuracy of the budgetting. `remove [context]`, context could either be a category name or expense name.
 
-### Sum/Viewing Expenses
-Viewing certain category of expenses and gathering a total of an expense or a category is done easy and simple for all users. 'view [ctx]', view the expenses within a specific category, or a expense itself...
+### Viewing Expenses/Categories
+Viewing a certain category of expenses or a singular expense is done easy and simple for all users. `view [ctx]`.
 
-Knowing the total of a certain category of expenses is important when you want to save money. Using 'sum [category' will calculate the total of the category and return it in a readable fashion.
+### Total of a category
+Knowing the total of a certain category of expenses is important when you want to save money. Using `sum [category]` will calculate the total of the category and return it in a readable fashion.
 
 ## Credits
 
