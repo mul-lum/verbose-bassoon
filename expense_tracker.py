@@ -16,7 +16,7 @@ def add(ctx, amt, category=None):
         return f'AMOUNT IS NOT A NUMBER'
 
     expenses = _profile['expenses']
-
+    
     if category != None:
         categories = _profile['category']
 
@@ -36,7 +36,7 @@ def add(ctx, amt, category=None):
 
 def view(ctx):
     categories, expenses = _profile['category'], _profile['expenses']
-
+    
     if ctx in expenses:
         total = expenses[ctx]
 
@@ -69,20 +69,22 @@ def remove(ctx):
     categories, expenses = _profile['category'], _profile['expenses']
 
     if ctx in categories:
-        remove = prompt('ARE YOU SURE YOU WANT TO REMOVE THIS CATEGORY (means deleting every expense in it too...)')
+        remove = prompt('DO YOU WANT TO REMOVE THE CATEGORY AND IT`S EXPENSES (means deleting every expense in it too...) OR REMOVE THE CATEGORY ITSELF\n(Y/N): ')
+        category = categories[ctx]
 
-        if remove == True:
-            category = categories[ctx]
-
+        if remove == True:    
             for expense in category:
                 dict.pop(expenses, expense)
 
-            dict.clear(category)
+            list.clear(category)
             dict.pop(categories, ctx)
 
             return f'SUCESSFULLY REMOVED ALL EXPENSES AND CATEGORY {ctx}'
         else:
-            return 'PROMPT FAILED'
+            list.clear(category)
+            dict.pop(categories, ctx)
+
+            return f'SUCESSFULLY REMOVED THE CATEGORY {ctx}'
 
     if ctx in expenses:
         dict.pop(expenses, ctx)
@@ -93,32 +95,45 @@ def remove(ctx):
 
 def help(ctx):
     meta = {
-        'add': '',
-        'view': '',
-        'sum': '',
-        'remove': '',
+        'add': 'CREATE OR ADD TO AN EXPENSE, `add [context] [value] [*category]`. Category is optional.',
+        'view': 'VIEW A CATEGORY OF EXPENSES OR SPECIFIC EXPENSE, `view [context]`',
+        'sum': 'PRINT SUM OF A CATEGORY, `sum [ctx]`',
+        'remove': 'REMOVE A CATEGORY (AND DELETE ALL EXPENSES WITHIN CATEGORY) OR A SPECIFIC CATEGORY, `remove [ctx]`',
+        'help': 'PRINT DIRECTORY FOR A SPECIFIC COMMAND, `help [ctx]`'
     }
+
+    try:
+        return f'{ctx}: {meta[ctx]}'
+    except:
+        for cmd, text in meta.items():
+            print(f'{cmd}: {text}')
+
+        return f'NO COMMAND FOUND, PRINTING ALL INSTEAD.'
 
 def parse(cmd):
     COMMANDS = {
-        'add': [add, 2],
-        'view': [view, 1],
-        'sum': [view, 1],
-        'remove': [remove, 1],
-        'help': [help, 1]
+        'add': [add, 2, True],
+        'view': [view, 1, False],
+        'sum': [sum, 1, False],
+        'remove': [remove, 1, False],
+        'help': [help, 1, False]
     }
 
     parsed = cmd.split(' ', 3)
     cmd = list.pop(parsed, 0)
 
     if cmd in COMMANDS:
-        callback, argC = COMMANDS[cmd]
+        argLen = len(parsed)
+        callback, argC, optArg = COMMANDS[cmd]
 
-        if len(parsed) >= argC:
+        if argLen >= argC:
             args = []
-            
+
             for i in range(argC):
                 list.append(args, parsed[i])
+           
+            if optArg and argLen >= 3: # find better way todo this, terrible way of implementing optional arguments
+                list.append(args, parsed[2])
 
             return callback(*args)
         else:
@@ -128,13 +143,13 @@ def parse(cmd):
 
 def init():
     while True:
-        cmd = input('What would you like to do?')
+        cmd = input('What would you like to do?\n> ')
 
         if cmd == 'exit':
             break
         else:
-            final = parse(cmd)
+            result = parse(cmd)
 
-            print(final)
+            print(f'\n{result}')
 
 init()
