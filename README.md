@@ -18,16 +18,16 @@ Download from `releases`, and follow instructions from there...
 - Error handling for invalid inputs
 - Clear, modular, and well-commented code
 
-### ➕ Add/Categorizing Expenses
+### ➕ *Add/Categorizing Expenses*
 Adding expenses and categorizing them is simple within our program. All in one command, using `add [name] [amount] [category]`... Category is optional and if no category parameter is passed than will default to None
 
-### ➖ Removing Expenses/Categories
+### ➖ *Removing Expenses/Categories*
 Removing categories or expenses is crucial for managing expenses and accuracy of the budgetting. `remove [context]`, context could either be a category name or expense name.
 
-### 🔍 Viewing Expenses/Categories
+### 🔍 *Viewing Expenses/Categories*
 Viewing a certain category of expenses or a singular expense is done easy and simple for all users. `view [ctx]`.
 
-### 💯 Viewing the Total of a Category
+### 💯 *Viewing the Total of a Category*
 Knowing the total of a certain category of expenses is important when you want to save money. Using `sum [category]` will calculate the total of the category and return it in a readable fashion.
 
 ## ⭐ Credits
