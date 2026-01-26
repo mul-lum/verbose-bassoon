@@ -20,6 +20,17 @@ Download `expense_tracker.py` in `main` branch, then run `python3 expense_tracke
 ### Track your expenses
 A key feature within our program is the ability to track expenses, using `view [name]` to view your expenses and those within a certain category.
 
+### Add/Categorizing Expenses
+Adding expenses and categorizing them is simple within our program. All in one command, using `add [name] [amount] [category]`... Category is optional and if no category parameter is passed than will default to None
+
+### Removing Expenses/Categories
+Removing categories or expenses is crucial for managing expenses and accuracy of the budgetting. `remove [context]`, context could either be a category name or expense name.
+
+### Sum/Viewing Expenses
+Viewing certain category of expenses and gathering a total of an expense or a category is done easy and simple for all users. 'view [ctx]', view the expenses within a specific category, or a expense itself...
+
+Knowing the total of a certain category of expenses is important when you want to save money. Using 'sum [category' will calculate the total of the category and return it in a readable fashion.
+
 ## Credits
 
 * Jaycob
@@ -44,19 +55,19 @@ A key feature within our program is the ability to track expenses, using `view [
 ## Reflection
 ### Challenges Faced
 
-Managing merge conflicts when multiple members edited the same file
+- Managing merge conflicts when multiple members edited the same file
 
-Ensuring consistent variable naming across branches
+- Ensuring consistent variable naming across branches
 
-Handling invalid user input without crashing the program
+- Handling invalid user input without crashing the program
 
 ### How We Overcame Them
 
-Used separate Git branches for each feature
+- Used separate Git branches for each feature
 
-Reviewed pull requests carefully before merging
+- Reviewed pull requests carefully before merging
 
-Added try-except blocks for error handling
+- Added try-except blocks for error handling
 
 ### Collaborative Coding Experience
 
