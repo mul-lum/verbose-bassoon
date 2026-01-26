@@ -1,8 +1,13 @@
+# expense_track.py
+# Jaycob & Muneeb
+
+# user data, dictionary which contains two keys that are lists 'expenses' & 'category'
 _profile = {
     'expenses': {},
     'category': {},
 }
 
+# prompts user for yes or no input and returns value based on input using string comparison.
 def prompt(msg):
     act = input(msg).lower()
 
@@ -11,7 +16,9 @@ def prompt(msg):
     else:
         return False
 
+# creates, add, and categorizes expenses. if no category is passed than it'll default to no category...
 def add(ctx, amt, category=None):
+    # guard statement to check if string isnt a numerical character...
     if amt.isdigit() != True:
         return f'AMOUNT IS NOT A NUMBER'
 
