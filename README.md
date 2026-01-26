@@ -4,7 +4,7 @@ Collaborative Project by Jaycob and Muneeb
 ## 📌 Introduction
 This project is a Python-based Expense Tracker that allows users to add, view, filter, calculate, and delete expenses. The program uses **Python dictionaries** to store expense data such as category, amount, and date. The project was developed collaboratively using GitHub.
 
-## Usage
+## 🔧 Usage
 
 Download `expense_tracker.py` in `main` branch, then run `python3 expense_tracker.py` (based on python installation) in terminal. 
 
@@ -17,22 +17,19 @@ Download `expense_tracker.py` in `main` branch, then run `python3 expense_tracke
 - Error handling for invalid inputs
 - Clear, modular, and well-commented code
 
-### Track your expenses
-A key feature within our program is the ability to track expenses, using `view [name]` to view your expenses and those within a certain category.
-
-### Add/Categorizing Expenses
+### ➕ Add/Categorizing Expenses
 Adding expenses and categorizing them is simple within our program. All in one command, using `add [name] [amount] [category]`... Category is optional and if no category parameter is passed than will default to None
 
-### Removing Expenses/Categories
+### ➖ Removing Expenses/Categories
 Removing categories or expenses is crucial for managing expenses and accuracy of the budgetting. `remove [context]`, context could either be a category name or expense name.
 
-### Viewing Expenses/Categories
+### 🔍 Viewing Expenses/Categories
 Viewing a certain category of expenses or a singular expense is done easy and simple for all users. `view [ctx]`.
 
-### Total of a category
+### 💯 Viewing the Total of a Category
 Knowing the total of a certain category of expenses is important when you want to save money. Using `sum [category]` will calculate the total of the category and return it in a readable fashion.
 
-## Credits
+## ⭐ Credits
 
 * Jaycob
  (Lead Developer)
@@ -53,7 +50,8 @@ Knowing the total of a certain category of expenses is important when you want t
 
  > Helped with code
 
-## Reflection
+## 💭 Reflection
+
 ### Challenges Faced
 
 - Managing merge conflicts when multiple members edited the same file
