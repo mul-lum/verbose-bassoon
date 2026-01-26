@@ -18,19 +18,18 @@ Download from `releases`, and follow instructions from there...
 - Error handling for invalid inputs
 - Clear, modular, and well-commented code
 
-### ➕ *Add/Categorizing Expenses*
-Adding expenses and categorizing them is simple within our program. All in one command, using the following: 
-   `add [name] [amount] [category]`
-Category is optional and if no category parameter is passed than will default to None
+### - ➕ Add/Categorizing Expenses
+Adding expenses and categorizing them is simple within our program. All in one command, using the following: <br> <br> &emsp; `add [name] [amount] [category]` <br> <br>
+***Category is optional and if no category parameter is passed than will default to None***.
 
-### ➖ *Removing Expenses/Categories*
-Removing categories or expenses is crucial for managing expenses and accuracy of the budgetting. `remove [context]`, context could either be a category name or expense name.
+### - ➖ Removing Expenses/Categories
+Removing categories or expenses is crucial for managing expenses and accuracy of the budgetting. <br> <br> &emsp; `remove [ctx]` <br> <br> ***`ctx` could either be category or expense.***
 
-### 🔍 *Viewing Expenses/Categories*
-Viewing a certain category of expenses or a singular expense is done easy and simple for all users. `view [ctx]`.
+### - 🔍 Viewing Expenses/Categories
+Viewing a certain category of expenses or a singular expense is done easy and simple for all users. <br> <br> &emsp; `view [ctx]`. <br> <br> ***`ctx` could either be category or expense.***
 
-### 💯 *Viewing the Total of a Category*
-Knowing the total of a certain category of expenses is important when you want to save money. Using `sum [category]` will calculate the total of the category and return it in a readable fashion.
+### - 💯 Viewing Sum of Category
+Knowing the total of a certain category of expenses is important when you want to save money. This command will calculate the total of the category and return it in a readable fashion <br> <br> &emsp; `sum [category]`
 
 ## ⭐ Credits
 
