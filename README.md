@@ -19,7 +19,9 @@ Download from `releases`, and follow instructions from there...
 - Clear, modular, and well-commented code
 
 ### ➕ *Add/Categorizing Expenses*
-Adding expenses and categorizing them is simple within our program. All in one command, using `add [name] [amount] [category]`... Category is optional and if no category parameter is passed than will default to None
+Adding expenses and categorizing them is simple within our program. All in one command, using the following: 
+   `add [name] [amount] [category]`
+Category is optional and if no category parameter is passed than will default to None
 
 ### ➖ *Removing Expenses/Categories*
 Removing categories or expenses is crucial for managing expenses and accuracy of the budgetting. `remove [context]`, context could either be a category name or expense name.
