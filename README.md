@@ -5,8 +5,9 @@ Collaborative Project by Jaycob and Muneeb
 This project is a Python-based Expense Tracker that allows users to add, view, filter, calculate, and delete expenses. The program uses **Python dictionaries** to store expense data such as category, amount, and date. The project was developed collaboratively using GitHub.
 
 ## 🔧 Usage
+Download from `releases`, and follow instructions from there...
 
-Download `expense_tracker.py` in `main` branch, then run `python3 expense_tracker.py` (based on python installation) in terminal. 
+> Download `expense_tracker.py` in `main` branch, then run `python3 expense_tracker.py` (based on python installation) in terminal. 
 
 ## ⚙️ Features   
 - Add new expenses (category, amount, date)
