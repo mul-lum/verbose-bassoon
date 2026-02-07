@@ -1,5 +1,5 @@
 # verbose-bassoon
-Collaborative Project by Jaycob and Muneeb
+
 
 ## 📌 Expense Tracker
 This project is a Python-based Expense Tracker that allows users to add, view, filter, calculate, and delete expenses. The program uses **Python dictionaries** to store expense data such as category, amount, and date. The project was developed collaboratively using GitHub.
