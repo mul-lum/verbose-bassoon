@@ -12,6 +12,13 @@ Download from `releases`, and follow instructions from there...
 > Download `expense_tracker.py` in `main` branch, then run `python3 expense_tracker.py` (based on python installation) in terminal. 
 
 ## ⚙️ Features   
+
+ NEW FEATURE 'PROFILES'
+
+ - categorize your expenses into different profiles...
+
+### PROFILES
+
 - Add new expenses (category, amount, date)
 - View all recorded expenses
 - Filter expenses by category
