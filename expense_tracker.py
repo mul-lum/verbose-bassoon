@@ -88,8 +88,6 @@ class UserProfile:
                 categories[category] = []
             
             list.append(categories[category], ctx)
-
-        print(category)
         
         if not ctx in expenses:
             expenses[ctx] = amt
